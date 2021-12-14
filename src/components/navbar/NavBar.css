@@ -1,0 +1,29 @@
+.navbar-list {
+    display: flex;
+    justify-content: center;
+
+    overflow: hidden;
+    background-color: rgba(0,0,0,.5);
+}
+
+li {
+    display: inline;
+}
+
+.navbar-list a {
+    text-decoration: none;
+    padding: 14px 16px;
+    color: rgb(238, 238, 238);
+
+    transition: 0.5s;
+}
+
+.navbar-list a:hover {
+    color: rgb(37, 37, 37);
+}
+
+.navbar-img {
+    margin-top: 1rem;
+    max-width: 20px;
+    max-height: 22px;
+}
