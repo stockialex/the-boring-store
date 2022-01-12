@@ -1,0 +1,13 @@
+.cartwidget-icon {
+    margin-top: 1rem;
+    max-width: 20px;
+    max-height: 22px;
+
+    color: white;
+
+    transition: 0.5s;
+}
+
+.cartwidget-icon:hover {
+    color: rgb(37, 37, 37);
+}
