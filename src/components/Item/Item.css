@@ -5,3 +5,11 @@
     align-items: center;
     justify-content: center;
 }
+
+.testTipo {
+    font-family: 'Futura';
+}
+
+.cardItem{
+    margin-top: 15px;
+}

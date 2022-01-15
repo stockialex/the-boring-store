@@ -5,21 +5,21 @@ import {CardContent} from '@mui/material'
 import {CardMedia} from '@mui/material'
 import Button from '@mui/material/Button'
 import {Typography} from '@mui/material'
-import image from '../../assets/images/flamethrower-tbs.jpeg'
+// import image from '../../assets/images/flamethrower-tbs.jpeg'
 import { Box } from '@mui/system'
 import ItemCount from '../ItemCount/ItemCount'
-import './ItemCard.css'
+import './Item.css'
 
 const ItemCard = (props) => {
     const [stock, setStock] = useState(props.stock)
     const [cartUser, setCartUser] = useState(1)
 
     return (
-        <Card sx={{ maxWidth: 345 }}>
+        <Card className='cardItem' sx={{ maxWidth: 345 }}>
             <CardMedia
                 component='img'
                 height='140px'
-                image={image}
+                image={props.pictureUrl}
                 alt='Elon Musk using the flamethrower'
             />
             <CardContent>
@@ -41,7 +41,7 @@ const ItemCard = (props) => {
             </CardActions>
             <CardActions>
                 <Box className='box-add_to_cart'>
-                    <Button size='medium' variant='contained'>
+                    <Button size='medium' variant='contained' className='testTipo'>
                         Agregar al carro
                     </Button>
                 </Box>
