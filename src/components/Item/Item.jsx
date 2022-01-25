@@ -14,6 +14,11 @@ const ItemCard = (props) => {
     const [stock, setStock] = useState(props.stock)
     const [cartUser, setCartUser] = useState(1)
 
+    function mostrarTotales() {
+        console.log(`En el inventario quedan ${stock} productos`)
+        console.log(`En el carrito hay ${cartUser} productos`)
+    }
+
     return (
         <Card className='cardItem' sx={{ maxWidth: 345 }}>
             <CardMedia
@@ -30,10 +35,11 @@ const ItemCard = (props) => {
                     {props.description}
                 </Typography>
             </CardContent>
+            <Typography className='price'>${props.price}</Typography>
             <CardActions>
                 <ItemCount
                     stockTotal={props.stock} 
-                    stock={stock} 
+                    stock={props.stock} 
                     setStock={setStock} 
                     cartUser={cartUser} 
                     setCartUser={setCartUser} 
@@ -46,6 +52,7 @@ const ItemCard = (props) => {
                     </Button>
                 </Box>
             </CardActions>
+            <Button onClick={mostrarTotales}>mostrar por consola</Button>
         </Card>
     );
 }

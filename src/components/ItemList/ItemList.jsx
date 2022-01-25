@@ -1,6 +1,7 @@
 import Item from '../Item/Item'
 import { useState, useEffect } from 'react'
 import productos from '../../assets/static/products'
+import { CircularProgress } from '@mui/material'
 import './ItemList.css'
 
 const ItemList = () => {
@@ -26,7 +27,7 @@ const ItemList = () => {
 
     return (
         <div className='itemList'>
-            {!llegoLaPromesa ? <p>Loading...</p> : arrayProdutos.map(producto => (
+            {!llegoLaPromesa ? <CircularProgress className='circular-progress' /> : arrayProdutos.map(producto => (
                 <Item
                     key={producto.id}
                     title={producto.title}

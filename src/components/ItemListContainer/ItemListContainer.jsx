@@ -1,7 +1,7 @@
 import './ItemListContainer.css'
 import ItemList from '../ItemList/ItemList'
 
-const ItemListContainer = (props) => {
+const ItemListContainer = () => {
     return (
         <ItemList />
     );

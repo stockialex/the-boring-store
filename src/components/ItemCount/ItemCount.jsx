@@ -4,20 +4,21 @@ import './ItemCount.css'
 
 const ItemCount = (props) => {
     const minStock = 1
+    const maxStock = props.stock
 
     function addProduct() {
         if(props.stock >= minStock && props.cartUser < props.stockTotal) {
             props.setStock(props.stock - 1)
             props.setCartUser(props.cartUser + 1)
-            console.log(props.stock)
-            console.log(props.cartUser)
-        }
+        } 
     }
 
     function removeProduct() {
         if(props.cartUser >= 1) {
             props.setCartUser(props.cartUser - 1)
-            props.setStock(props.stock + 1)
+            props.stock < maxStock ? 
+                props.setStock(props.stock + 1) :
+                props.setStock(props.stock + 0)
         }
     }
 

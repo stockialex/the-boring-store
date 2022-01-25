@@ -1,6 +1,7 @@
 .navbar-list {
     display: flex;
-    justify-content: center;
+    justify-content:space-between;
+    align-items: center;
 
     overflow: hidden;
     background-color: rgba(0,0,0,.5);
@@ -26,4 +27,9 @@ li {
     margin-top: 1rem;
     max-width: 20px;
     max-height: 22px;
+    margin-left: 8px;
+}
+
+.div-menu {
+    margin-right: 8px;
 }
