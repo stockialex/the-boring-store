@@ -4,7 +4,6 @@ import productos from '../../assets/static/products'
 import { CircularProgress } from '@mui/material'
 import { useState, useEffect } from 'react'
 
-
 const ItemDetailContainer = () => {
     const [product, setProduct] = useState([])
     const [promiseOk, setPromiseOk] = useState(false)
