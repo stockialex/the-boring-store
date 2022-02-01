@@ -5,12 +5,11 @@ import {CardContent} from '@mui/material'
 import {CardMedia} from '@mui/material'
 import Button from '@mui/material/Button'
 import {Typography} from '@mui/material'
-// import image from '../../assets/images/flamethrower-tbs.jpeg'
 import { Box } from '@mui/system'
-import ItemCount from '../ItemCount/ItemCount'
+import { Link, useParams } from 'react-router-dom'
 import './Item.css'
 
-const ItemCard = (props) => {
+const Item = (props) => {
     const [stock, setStock] = useState(props.stock)
     const [cartUser, setCartUser] = useState(1)
 
@@ -18,6 +17,8 @@ const ItemCard = (props) => {
         console.log(`En el inventario quedan ${stock} productos`)
         console.log(`En el carrito hay ${cartUser} productos`)
     }
+
+    console.log(`el ID en item es: ${props.keyItem}`)
 
     return (
         <Card className='cardItem' sx={{ maxWidth: 345 }}>
@@ -37,24 +38,18 @@ const ItemCard = (props) => {
             </CardContent>
             <Typography className='price'>${props.price}</Typography>
             <CardActions>
-                <ItemCount
-                    stockTotal={props.stock} 
-                    stock={props.stock} 
-                    setStock={setStock} 
-                    cartUser={cartUser} 
-                    setCartUser={setCartUser} 
-                />  
             </CardActions>
             <CardActions>
                 <Box className='box-add_to_cart'>
-                    <Button size='medium' variant='contained' className='testTipo'>
-                        Agregar al carro
-                    </Button>
+                    <Link to={`/item/${props.keyItem}`} className='link-item'>
+                        <Button size='medium' variant='contained' className='testTipo'>
+                            Ver más
+                        </Button>
+                    </Link>
                 </Box>
             </CardActions>
-            <Button onClick={mostrarTotales}>mostrar por consola</Button>
         </Card>
     );
 }
  
-export default ItemCard;
+export default Item;

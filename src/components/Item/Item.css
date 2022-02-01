@@ -17,3 +17,7 @@
 .price {
     text-align: center;
 }
+
+.link-item {
+    text-decoration: none;
+}

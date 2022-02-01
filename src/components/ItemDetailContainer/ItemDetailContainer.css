@@ -12,3 +12,7 @@
 .circular-progress {
     margin-top: 1rem;
 }
+
+.link-item {
+    text-decoration: none;
+}

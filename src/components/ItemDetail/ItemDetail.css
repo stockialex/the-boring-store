@@ -44,3 +44,11 @@
 .item-price {
     text-align: center;
 }
+
+.box-add_to_cart {
+    display: flex; 
+    width: 100%; 
+    height: auto;
+    align-items: center;
+    justify-content: center;
+}
